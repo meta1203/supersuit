@@ -1,0 +1,9 @@
+{
+  "name": "supersuit",
+  "version": "!{version}!",
+  "title": "Supersuit",
+  "author": "meta1203",
+  "factorio_version": "1.1",
+  "dependencies": ["base >= 1.1"],
+  "description": "Adds some OP power armor and modules"
+}
