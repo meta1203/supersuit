@@ -195,7 +195,7 @@ data:extend(
 				width = 302,
 				height = 318,
 			},
-			order = "a[energy-source]-b[nuclear-reactor]",
+			order = "a[energy-source]-b[nuclear-reactora]",
 			power = (settings.startup["supersuit-generator-production"].value * 4) .. "kW",
 			categories = {"armor"},
 			burner = {
@@ -223,7 +223,7 @@ data:extend(
 			icon_size = 64,
 			placed_as_equipment_result = "supersuit-nuclear-generator",
 			subgroup = "equipment",
-			order = "a[energy-source]-b[nuclear-reactor]",
+			order = "a[energy-source]-b[nuclear-reactora]",
 			stack_size = 1
 		},
 		{
@@ -237,7 +237,7 @@ data:extend(
 				width = 302,
 				height = 318,
 			},
-			order = "a[energy-source]-b[nuclear-reactor-2]",
+			order = "a[energy-source]-b[nuclear-reactorb]",
 			power = (settings.startup["supersuit-generator-production"].value * 8) .. "kW",
 			categories = {"armor"},
 			burner = {
@@ -265,7 +265,7 @@ data:extend(
 			icon_size = 64,
 			placed_as_equipment_result = "supersuit-nuclear-generator-2",
 			subgroup = "equipment",
-			order = "a[energy-source]-b[nuclear-reactor-2]",
+			order = "a[energy-source]-b[nuclear-reactorb]",
 			stack_size = 1
 		},
 		{
