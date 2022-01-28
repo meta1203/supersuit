@@ -28,11 +28,11 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Package
         run: |
-          export V=`date +%y.%m.%d`,
-          export D="supersuit_$V",
-          mkdir $D,
-          cp -R controls prototypes graphics locale *.lua info.json $D,
-          sed -i "s/{version}/$V/" $D/info.json,
+          export V=`date +%y.%m.%d`
+          export D="supersuit_$V"
+          mkdir $D
+          cp -R controls prototypes graphics locale *.lua info.json $D
+          sed -i "s/{version}/$V/" $D/info.json
           zip -r $D.zip $D
       - name: Push to Release
         uses: softprops/action-gh-release@v0.1.14
