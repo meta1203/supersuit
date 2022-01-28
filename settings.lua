@@ -27,4 +27,18 @@ data:extend({
 		setting_type = "startup",
 		default_value = false
 	},
+	{
+		type = "bool-setting",
+		name = "supersuit-enable-generators",
+		setting_type = "startup",
+		default_value = true
+	},
+	{
+		type = "int-setting",
+		name = "supersuit-grid-size",
+		setting_type = "startup",
+		default_value = 40,
+		minimum_value = 20,
+		maximum_value = 100
+	},
 })

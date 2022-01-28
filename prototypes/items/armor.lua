@@ -2,8 +2,8 @@ data:extend{
   {
     type = "equipment-grid",
     name = "op-grid",
-    width = 40,
-    height = 40,
+    width = settings.startup["supersuit-grid-size"].value,
+    height = settings.startup["supersuit-grid-size"].value,
     equipment_categories = {"armor"}
   },
   {

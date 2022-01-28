@@ -141,71 +141,6 @@ data:extend{
 	},
 	{
 		type = "technology",
-		name = "supersuit-burner-generator",
-		icon = "__supersuit__/graphics/technologies/personal_boiler.png",
-		icon_size = 269,
-		unit = {
-			count = 500,
-			ingredients = {
-				{"automation-science-pack", 1},
-				{"logistic-science-pack", 1},
-				{"military-science-pack", 1},
-				{"chemical-science-pack", 2},
-			},
-			time = 60
-		},
-		prerequisites = {"battery-equipment", "supersuit-miniaturization"},
-		effects = { { type  = "unlock-recipe", recipe = "supersuit-burner-generator" } }
-	},
-	{
-		type = "technology",
-		name = "supersuit-nuclear-generator",
-		icon = "__supersuit__/graphics/technologies/personal_reactor.png",
-		icon_size = 256,
-		unit = {
-			count = 1000,
-			ingredients = {
-				{"automation-science-pack", 1},
-				{"logistic-science-pack", 1},
-				{"military-science-pack", 1},
-				{"chemical-science-pack", 5},
-				{"utility-science-pack", 1},
-			},
-			time = 60
-		},
-		prerequisites = {"supersuit-miniaturization", "utility-science-pack"},
-		effects = { { type  = "unlock-recipe", recipe = "supersuit-nuclear-generator" } }
-	},
-	{
-		type = "technology",
-		name = "supersuit-nuclear-generator-2",
-		icon = "__supersuit__/graphics/technologies/none.png",
-		icon_size = 256,
-		unit = {
-			count = 1000,
-			ingredients = settings.startup["supersuit-require-space-science"].value and {
-				{"automation-science-pack", 1},
-				{"logistic-science-pack", 1},
-				{"military-science-pack", 1},
-				{"chemical-science-pack", 10},
-				{"production-science-pack", 1},
-				{"utility-science-pack", 5},
-				{"space-science-pack", 1}
-			} or {
-				{"automation-science-pack", 1},
-				{"logistic-science-pack", 1},
-				{"military-science-pack", 1},
-				{"chemical-science-pack", 10},
-				{"production-science-pack", 1},
-				{"utility-science-pack", 5}
-			},
-			time = 60
-		},
-		prerequisites = {"supersuit-nanotech", "supersuit-nuclear-generator"},
-		effects = { { type  = "unlock-recipe", recipe = "supersuit-nuclear-generator-2" } }
-	},
-	{
-		type = "technology",
 		name = "supersuit-exoskeleton-mk2",
 		icon = "__supersuit__/graphics/technologies/exoskeleton-mk2.png",
 		icon_size = 256,
@@ -249,3 +184,73 @@ data:extend{
 		effects = { { type  = "unlock-recipe", recipe = "supersuit-exoskeleton-mk3" } }
 	},
 }
+
+if settings.startup["supersuit-enable-generators"].value then
+   data:extend{
+      {
+	 type = "technology",
+	 name = "supersuit-burner-generator",
+	 icon = "__supersuit__/graphics/technologies/personal_boiler.png",
+	 icon_size = 269,
+	 unit = {
+	    count = 500,
+	    ingredients = {
+	       {"automation-science-pack", 1},
+	       {"logistic-science-pack", 1},
+	       {"military-science-pack", 1},
+	       {"chemical-science-pack", 2},
+	    },
+	    time = 60
+	 },
+	 prerequisites = {"battery-equipment", "supersuit-miniaturization"},
+	 effects = { { type  = "unlock-recipe", recipe = "supersuit-burner-generator" } }
+      },
+      {
+	 type = "technology",
+	 name = "supersuit-nuclear-generator",
+	 icon = "__supersuit__/graphics/technologies/personal_reactor.png",
+	 icon_size = 256,
+	 unit = {
+	    count = 1000,
+	    ingredients = {
+	       {"automation-science-pack", 1},
+	       {"logistic-science-pack", 1},
+	       {"military-science-pack", 1},
+	       {"chemical-science-pack", 5},
+	       {"utility-science-pack", 1},
+	    },
+	    time = 60
+	 },
+	 prerequisites = {"supersuit-miniaturization", "utility-science-pack"},
+	 effects = { { type  = "unlock-recipe", recipe = "supersuit-nuclear-generator" } }
+      },
+      {
+	 type = "technology",
+	 name = "supersuit-nuclear-generator-2",
+	 icon = "__supersuit__/graphics/technologies/none.png",
+	 icon_size = 256,
+	 unit = {
+	    count = 1000,
+	    ingredients = settings.startup["supersuit-require-space-science"].value and {
+	       {"automation-science-pack", 1},
+	       {"logistic-science-pack", 1},
+	       {"military-science-pack", 1},
+	       {"chemical-science-pack", 10},
+	       {"production-science-pack", 1},
+	       {"utility-science-pack", 5},
+	       {"space-science-pack", 1}
+	    } or {
+	       {"automation-science-pack", 1},
+	       {"logistic-science-pack", 1},
+	       {"military-science-pack", 1},
+	       {"chemical-science-pack", 10},
+	       {"production-science-pack", 1},
+	       {"utility-science-pack", 5}
+	    },
+	    time = 60
+	 },
+	 prerequisites = {"supersuit-nanotech", "supersuit-nuclear-generator"},
+	 effects = { { type  = "unlock-recipe", recipe = "supersuit-nuclear-generator-2" } }
+      },
+   }
+end
