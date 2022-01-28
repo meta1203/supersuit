@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [ dev ]
   pull_request:
-    branches: [ main ]
+    branches: [ dev ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -44,6 +44,7 @@ jobs:
         uses: softprops/action-gh-release@v0.1.14
         with:
           files: supersuit_${{ steps.date.outputs.date }}.zip
-          name: Release ${{ steps.date.outputs.date }}
-          tag_name: release
+          name: Development artifact ${{ steps.date.outputs.date }}
+          tag_name: development
+          prerelease: true
 
