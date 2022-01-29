@@ -24,6 +24,7 @@ data:extend{
 	 },
 	 time = 60
       },
-      prerequisites = {"supersuit-combat-predictions", "supersuit-nanotech"}
+      prerequisites = {"supersuit-combat-predictions", "supersuit-nanotech"},
+	  effects = {},
    }
 }

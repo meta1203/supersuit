@@ -53,7 +53,7 @@ for k,m in pairs(loop_through) do
       }})
 
       -- add recipe to technology
-      insert(data.raw["technology"]["supersuit-landmines"].effects, {type = "unlock-recipe", recipe = new_mine.name})
+      table.insert(data.raw["technology"]["supersuit-landmines"].effects, {type = "unlock-recipe", recipe = new_mine.name})
       
       log("Created " .. new_mine.name)
    end
