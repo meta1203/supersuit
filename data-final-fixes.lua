@@ -1,2 +1,3 @@
-require("prototypes.technologies.landmines")
-require("prototypes.items.landmines")
+require("prototypes.technologies.weapons")
+require("prototypes.items.weapons")
+
